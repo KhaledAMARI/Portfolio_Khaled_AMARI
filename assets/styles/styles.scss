@@ -1,0 +1,114 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --color-primary: #191d2b;
+  --color-secondary: #27AE60;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-0: #f8f8f8;
+  --color-gray-1: #dbe1e8;
+  --color-gray-2: #d2becd;
+  --color-gray-3: #6c7983;
+  --color-gray-4: #454e56;
+  --color-gray-5: #2a2e35;
+  --color-gray-6: #12181b;
+  --transition-setup: all .4s ease-in-out;
+  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  transition: var(--transition-setup);
+}
+
+header {
+  height: 100vh;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3rem 18rem;
+}
+
+.section {
+  transform: translateY(-100%) scale(0);
+  transition: var(--transition-setup);
+  background-color: var(--color-primary);
+}
+
+.hide {
+  display: none;
+}
+
+.sec1 {
+  transform: translateY(0) scale(1);
+}
+
+.sec2 {
+  transform: translateY(0) scale(1);
+}
+
+.sec3 {
+  transform: translateY(0) scale(1);
+}
+
+.sec4 {
+  transform: translateY(0) scale(1);
+}
+
+.sec5 {
+  transform: translateY(0) scale(1);
+}
+
+.controls {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .active-btn {
+    background-color: var(--color-secondary) !important;
+    transition: var(--transition-setup);
+    i {
+      color: var(--color-white) !important;
+    }
+  }
+  .control {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--color-gray-4);
+    font-size: 1.5rem;
+    box-shadow: var(--box-shadow-1);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .7rem 0;
+    i {
+      font-size: 1.2rem;
+      color: var(--color-gray-2);
+      pointer-events: none;
+    }
+  }
+}
+
+
+
