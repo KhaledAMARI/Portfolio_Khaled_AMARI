@@ -1,42 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/styles/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="main.js" defer></script>
-  <title>Portfolio Khaled AMARI</title>
-</head>
-<body>
-  <header class="section sec1 hide">
-  </header>
-  <main>
-    <section class="section sec2  hide about"></section>
-    <section class="section sec3  hide portfolio"></section>
-    <section class="section sec4  hide blogs"></section>
-    <section class="section sec5  hide contact"></section>
-  </main>
-  <div class="controls" data-controls-container>
-    <div class="control control-home active-btn" data-control="home">
-      <i class="fas fa-home"></i>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="main.js" defer></script>
+    <title>Portfolio Khaled AMARI</title>
+  </head>
+  <body>
+    <header class="section sec1 active" id="home" data-section>
+      <div class="home-content">
+        <div class="left-side">
+          <div class="home-shape"></div>
+          <div class="home-img-container">
+            <img
+              src="assets/images/profile.jpg"
+              alt="profile image"
+              class="home-img"
+            />
+          </div>
+        </div>
+        <div class="right-side">
+          <h1 class="name">
+            Hi, I'am <span>Khaled AMARI.</span> A Full Stack JAVASCRIPT
+            developer
+          </h1>
+          <p>
+            Passionate about new technologies and trends as well as challenges,
+            having maths and problem solving skills, I found myself in the IT
+            field with great thirst.
+          </p>
+          <div class="download-btn-container">
+            <a
+              href="https://cvdesignr.com/p/5d13e00edce0b"
+              class="cv-download-btn"
+              target="_blank"
+            >
+              <span class="download-btn-text">Download CV</span>
+              <span class="download-btn-icon"
+                ><i class="fas fa-download"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section
+        class="section sec2 hide about"
+        id="about"
+        data-section
+      ></section>
+      <section
+        class="section sec3 hide portfolio"
+        id="portfolio"
+        data-section
+      ></section>
+      <section
+        class="section sec4 hide blogs"
+        id="blogs"
+        data-section
+      ></section>
+      <section
+        class="section sec5 hide contact"
+        id="contact"
+        data-section
+      ></section>
+    </main>
+    <div class="controls" data-controls-container>
+      <div class="control control-home active-btn" data-control="home">
+        <i class="fas fa-home"></i>
+      </div>
+      <div class="control control-about" data-control="about">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="control control-portfolio" data-control="portfolio">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <div class="control control-blogs" data-control="blogs">
+        <i class="far fa-newspaper"></i>
+      </div>
+      <div class="control control-contact" data-control="contact">
+        <i class="fas fa-envelope-open"></i>
+      </div>
     </div>
-    <div class="control control-about" data-control="about">
-      <i class="fas fa-user"></i>
-    </div>
-    <div class="control control-portfolio" data-control="portfolio">
-      <i class="fas fa-briefcase"></i>
-    </div>
-    <div class="control control-blogs" data-control="blogs">
-      <i class="far fa-newspaper"></i>
-    </div>
-    <div class="control control-contact"  data-control="contact">
-      <i class="fas fa-envelope-open"></i>
-    </div>
-  </div>
-</body>
+  </body>
 </html>

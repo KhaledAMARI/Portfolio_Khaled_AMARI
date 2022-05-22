@@ -33,6 +33,13 @@ header {
   overflow: hidden;
 }
 
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
 section {
   min-height: 100vh;
   width: 100%;
@@ -72,6 +79,18 @@ section {
   transform: translateY(0) scale(1);
 }
 
+.active {
+  animation: showSection 1s ease-in-out;
+  @keyframes showSection {
+    0% {
+      transform: translateY(-100%) scale(0);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
 .controls {
   position: fixed;
   z-index: 10;
@@ -109,6 +128,109 @@ section {
     }
   }
 }
+
+// home style
+.home-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  .left-side {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .home-shape {
+      transition: var(--transition-setup);
+      width: 65%;
+      height: 100%;
+      background-color: var(--color-secondary);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+    }
+    .home-img-container {
+      border-radius: var(--br-sm-2);
+      height: 90%;
+      width: 68%;
+      margin-left: 4rem;
+      background-color: var(--color-black);
+      transition: var(--transition-setup);
+      .home-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: var(--transition-setup);
+        filter: grayscale(100%);
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 18rem;
+    .name {
+      // font-size: 2rem;
+      span {
+        color: var(--color-secondary);
+      }
+    }
+    p {
+      margin: 1.5rem 0;
+      line-height: 2rem;
+    }
+  }
+}
+
+//reusable styled component
+.download-btn-container {
+  display: flex;
+  align-self: flex-start;
+}
+.cv-download-btn {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--color-secondary);
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  overflow: hidden;
+  .download-btn-text {
+    padding: 0 2rem;
+  }
+  .download-btn-icon {
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0%;
+    transform: translateX(100%);
+    transition: var(--transition-setup);
+    z-index: -1;
+  }
+  &:hover {
+    &::before {
+      height: 100%;
+      width: 100%;
+      background-color: var(--color-secondary);
+      transform: translateX(0);
+    }
+  }
+}
+
 
 
 
