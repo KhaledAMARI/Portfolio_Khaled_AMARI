@@ -17,6 +17,9 @@
   --color-gray-6: #12181b;
   --transition-setup: all .4s ease-in-out;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+  --box-shadow-2: 1px 1px 20px rgba(0,0,0,.1);
+  --box-shadow-3: 1px 1px 20px rgba(0,0,0,.3);
+  --box-shadow-4: 1px 4px 20px rgba(0,0,0,.8);
 }
 
 body {
@@ -408,6 +411,7 @@ section {
   padding: 2rem 0;
   text-align: center;
 }
+
 .portfolio-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -480,6 +484,156 @@ section {
   transform: scale(1);
 }
 
+// Blogs style
+.blog-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  .blog-item {
+    position: relative;
+    background-color: var(--color-gray-5);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-2);
+    transition: var(--transition-setup);
+    &:hover {
+      box-shadow: var(--box-shadow-3);
+      transform: translateY(-5px);
+      transition: var(--transition-setup);
+      img {
+        filter: grayscale(0);
+        transform: scale(1.1);
+        box-shadow: var(--box-shadow-4);
+      }
+    }
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      filter: grayscale(100%);
+      transition: var(--transition-setup);
+    }
+    .blog-item-text {
+      margin-top: -7px;
+      padding: 1.1rem;
+      border-top: 8px solid var(--color-secondary);
+      h4 {
+        font-size: 1.5rem;
+        margin-bottom: .7rem;
+        transition: var(--transition-setup);
+        cursor: pointer;
+        &:hover {
+          color: var(--color-secondary);
+        }
+      }
+      p {
+        color: var(--color-gray-2);
+        padding-bottom: 1rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
+// Contact style
+.contact-content {
+  display: flex;
+  padding-top: 3.5rem;
+  .contact-left-side {
+    flex: 2;
+    h4 {
+      padding-top: 1rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+    p {
+      margin: 1rem 0;
+      line-height: 2rem;
+    }
+    .contact-info {
+      .contact-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+          margin: .3rem 0 !important;
+          padding: 0 !important;
+        }
+        .icon {
+          display: grid;
+          grid-template-columns: 40px 1fr;
+          i {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+    .social-contact-icons {
+      display: flex;
+      margin-top: 2rem;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-white);
+        background-color: var(--color-gray-5);
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0 .4rem;
+        transition: var(--transition-setup);
+        &:hover {
+          background-color: var(--color-secondary);
+          i {
+            color: var(--color-primary);
+          }
+        }
+        i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  .contact-right-side {
+    flex: 3;
+    margin-left: 3rem;
+    .input-control {
+      margin: 1.5rem 0;
+      input, textarea {
+        border-radius: 30px;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        padding: .8rem 1.1rem;
+        outline: none;
+        border: none;
+        background-color: var(--color-gray-5);
+        width: 100%;
+        color: var(--color-white);
+        resize: none;
+      }
+    }
+    .input-control-group {
+      display: flex;
+      :last-child {
+        margin-left: 1.5rem;
+      }
+    }
+    .submit-form-btn {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
+
 
 
 //reusable styled component
@@ -546,7 +700,7 @@ section {
       z-index: -1;
       transform: translate(-50%, -50%);
       font-weight: 800;
-      font-size: 6.3rem;
+      font-size: 5.5rem;
     }
   }
 }
