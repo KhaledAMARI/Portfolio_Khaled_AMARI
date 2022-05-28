@@ -1,3 +1,6 @@
+// file imports
+@import 'mixins';
+
 *, ::before, ::after {
   box-sizing: border-box;
   list-style: none;
@@ -114,10 +117,8 @@ section {
   top: 50%;
   right: 3%;
   transform: translateY(-50%);
-  display: flex;
+  @include flex-center();
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   .active-btn {
     background-color: var(--color-secondary) !important;
     transition: var(--transition-setup);
@@ -134,9 +135,7 @@ section {
     border-radius: 50%;
     width: 55px;
     height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     margin: .7rem 0;
     i {
       font-size: 1.2rem;
@@ -154,9 +153,7 @@ section {
   height: 70px;
   border-radius: 50%;
   background-color: var(--color-gray-4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center();
   cursor: pointer;
   box-shadow: var(--box-shadow-1);
   transition: all .1s ease-in-out;
@@ -410,9 +407,7 @@ section {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center();
         i {
           font-size: 1.3rem;
         }
@@ -472,10 +467,8 @@ section {
         position: absolute;
         left: 0;
         top: 0;
-        display: flex;
+        @include flex-center();
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         opacity: 0;
         transform: scale(0);
         transition: var(--transition-setup);
@@ -485,17 +478,13 @@ section {
           margin-bottom: 1.5rem;
         }
         .item-icons {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flex-center();
           a {
             background-color: var(--color-primary);
             border-radius: 50%;
             width: 50px;
             height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-center();
             margin: 0 1rem;
             cursor: pointer;
             transition: var(--transition-setup);
@@ -614,9 +603,7 @@ section {
       display: flex;
       margin-top: 2rem;
       a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center();
         color: var(--color-white);
         background-color: var(--color-gray-5);
         cursor: pointer;
@@ -632,9 +619,7 @@ section {
           }
         }
         i {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flex-center();
           font-size: 1.3rem;
         }
       }
@@ -694,9 +679,7 @@ section {
   }
   .download-btn-icon {
     background-color: var(--color-secondary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     border-radius: 50%;
     padding: 1rem;
   }
