@@ -1,0 +1,122 @@
+/*
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+*/
+@media screen and (max-width: 576px) {
+  header {
+    padding: 0;
+  }
+  header .home-right-side {
+    padding: 2rem !important;
+  }
+  .home-content {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem !important;
+  }
+  .home-left-side {
+    .home-shape {
+      display: none;
+    }
+  }
+  .home-right-side {
+    grid-row: 1;
+    width: 90%;
+    margin: 0 auto;
+    .name {
+      font-size: 1.5rem !important;
+    }
+  }
+  header .home-left-side .home-img-container {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .about-content {
+    grid-template-columns: 1fr;
+    .about-left-side {
+      margin: 0 auto;
+      padding-right: 0;
+      p {
+        padding-left: 0;
+      }
+    }
+    .about-right-side {
+      grid-template-columns: 1fr;
+      padding-top: 2.5rem !important;
+    }
+  }
+  .section {
+    padding: 2rem !important;
+  }
+  .about-timeline {
+    .timeline-items {
+      grid-template-columns: 1fr;
+      padding-bottom: 6rem;
+    }
+  }
+  .about-stats {
+    .progress-bars {
+      grid-template-columns: 1fr;
+    }
+  }
+  .portfolio-items {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .blog-items {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+    padding-top: 3.5rem;
+  }
+  .contact-container {
+    padding-bottom: 6rem;
+    .contact-content {
+      flex-direction: column;
+      .contact-right-side {
+        margin-left: 0;
+        margin-top: 2.5rem;
+      }
+    }
+  }
+  .contact-content .contact-right-side .input-control-group {
+    flex-direction: column;
+    :last-child {
+      margin-top: 1.5rem;
+      margin-left: 0;
+    }
+  }
+  .main-title {
+    h2 {
+      font-size: 2rem;
+      span {
+        font-size: 2.5rem;
+      }
+      .bg-text {
+        font-size: 2.9rem;
+      }
+    }
+  }
+  .switch-theme-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .controls {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    flex-direction: row;
+    justify-content: center;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-gray-5);
+    .control {
+      margin: 1rem .3rem;
+    }
+  }
+
+}

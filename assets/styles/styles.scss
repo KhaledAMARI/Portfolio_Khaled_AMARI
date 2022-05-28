@@ -1,5 +1,5 @@
 // file imports
-@import 'mixins';
+@import './mixins';
 
 *, ::before, ::after {
   box-sizing: border-box;
@@ -27,7 +27,7 @@
 
 .light-mode {
   --color-primary: #ffffff;
-  --color-secondary: ##1877F2;
+  --color-secondary: #1877F2;
   --color-white: #454e56;
   --color-black: #000000;
   --color-gray-0: #f8f8f8;
@@ -48,7 +48,7 @@ body {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   color: var(--color-white);
   overflow: hidden;
 }
@@ -171,7 +171,7 @@ section {
 .home-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100%;
+  min-height: 100vh;
   .home-left-side {
     display: flex;
     align-items: center;
@@ -210,7 +210,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 18rem;
+    padding-right: 18rem;
     .name {
       // font-size: 2rem;
       span {
@@ -725,6 +725,9 @@ section {
     }
   }
 }
+
+// import media queries
+@import './media'
 
 
 
