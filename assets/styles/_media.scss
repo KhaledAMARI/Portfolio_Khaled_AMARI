@@ -8,7 +8,7 @@ $grid-breakpoints: (
   xxl: 1400px
 );
 */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   header {
     padding: 0;
   }
@@ -119,4 +119,71 @@ $grid-breakpoints: (
     }
   }
 
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .controls {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    flex-direction: row;
+    justify-content: center;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-gray-5);
+    .control {
+      margin: 1rem .3rem;
+    }
+  }
+  header {
+    padding: 0;
+  }
+  header .home-right-side {
+    padding: 2rem !important;
+  }
+  .home-content {
+    padding-bottom: 6rem !important;
+  }
+  .about-content {
+    grid-template-columns: 1fr;
+    .about-left-side {
+      margin: 0 auto;
+      padding-right: 0;
+      p {
+        padding-left: 0;
+      }
+    }
+    .about-right-side {
+      padding-top: 2.5rem !important;
+    }
+  }
+  .section {
+    padding: 2rem !important;
+  }
+  .portfolio-items {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 6rem;
+  }
+  .blog-items {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 6rem;
+    padding-top: 3.5rem;
+  }
+  .contact-container {
+    padding-bottom: 6rem;
+    .contact-content {
+      .contact-left-side {
+        h4 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .contact-content .contact-right-side .input-control-group {
+    flex-direction: column;
+    :last-child {
+      margin-top: 1.5rem;
+      margin-left: 0;
+    }
+  }
 }

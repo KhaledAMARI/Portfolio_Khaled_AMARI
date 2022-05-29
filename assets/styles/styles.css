@@ -1046,7 +1046,7 @@ $grid-breakpoints: (
   xxl: 1400px
 );
 */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   header {
     padding: 0;
   }
@@ -1167,6 +1167,81 @@ $grid-breakpoints: (
   }
   .controls .control {
     margin: 1rem .3rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .controls {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-gray-5);
+  }
+  .controls .control {
+    margin: 1rem .3rem;
+  }
+  header {
+    padding: 0;
+  }
+  header .home-right-side {
+    padding: 2rem !important;
+  }
+  .home-content {
+    padding-bottom: 6rem !important;
+  }
+  .about-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-content .about-left-side {
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  .about-content .about-left-side p {
+    padding-left: 0;
+  }
+  .about-content .about-right-side {
+    padding-top: 2.5rem !important;
+  }
+  .section {
+    padding: 2rem !important;
+  }
+  .portfolio-items {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding-bottom: 6rem;
+  }
+  .blog-items {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding-bottom: 6rem;
+    padding-top: 3.5rem;
+  }
+  .contact-container {
+    padding-bottom: 6rem;
+  }
+  .contact-container .contact-content .contact-left-side h4 {
+    margin-top: 0;
+  }
+  .contact-content .contact-right-side .input-control-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-content .contact-right-side .input-control-group :last-child {
+    margin-top: 1.5rem;
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
