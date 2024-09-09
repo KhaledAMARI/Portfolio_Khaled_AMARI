@@ -110,6 +110,13 @@ section {
           animation: showSection 1s ease-in-out;
 }
 
+.experience-bullets li {
+    list-style-type: disc !important;
+    &::marker {
+      color: white;
+    }
+}
+
 @-webkit-keyframes showSection {
   0% {
     -webkit-transform: translateY(-100%) scale(0);
@@ -464,6 +471,50 @@ section {
   width: 90%;
 }
 
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .typescript {
+  width: 75%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .redux {
+  width: 70%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .tailwind {
+  width: 80%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .zustand {
+  width: 80%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .storybook {
+  width: 75%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .react {
+  width: 90%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .next {
+  width: 60%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .nest {
+  width: 65%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .mongoose {
+  width: 65%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .postgreSQL {
+  width: 70%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .typeORM {
+  width: 70%;
+}
+
 .about-stats .progress-bars .progress-bar .bar-content .bar-fill .vue {
   width: 75%;
 }
@@ -478,6 +529,14 @@ section {
 
 .about-stats .progress-bars .progress-bar .bar-content .bar-fill .pug {
   width: 65%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .webpack {
+  width: 50%;
+}
+
+.about-stats .progress-bars .progress-bar .bar-content .bar-fill .babel {
+  width: 50%;
 }
 
 .about-stats .progress-bars .progress-bar .bar-content .bar-fill .moleculer {
