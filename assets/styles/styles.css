@@ -405,11 +405,42 @@ section {
   padding-bottom: 4rem;
 }
 
+.about-stats .skills-list .list-item{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-stats .skills-list .list-item .title {
+  text-transform: uppercase;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+
+.about-stats .skills-list .list-item .content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-right: 5px;
+  overflow: auto;
+}
+
+.about-stats .skills-list .content .skill {
+  padding: 2px;
+  margin: 2px;
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-stats .progress-bars {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
 }
 
